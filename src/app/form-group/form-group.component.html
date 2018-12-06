@@ -1,0 +1,15 @@
+<h2>
+  {{ title }}
+</h2>
+
+<form [formGroup]="formGroup" novalidate>
+    <input type="text" formControlName="name" placeholder="Nome">
+
+    <button type="button" (click)="addUser()" [disabled]="!formGroup.valid">Adicionar à lista</button>
+
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user }}
+      </li>
+    </ul>    
+</form>

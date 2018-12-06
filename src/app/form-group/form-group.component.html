@@ -4,12 +4,13 @@
 
 <form [formGroup]="formGroup" novalidate>
     <input type="text" formControlName="name" placeholder="Nome">
+    <input type="text" formControlName="email" placeholder="E-mail">
 
     <button type="button" (click)="addUser()" [disabled]="!formGroup.valid">Adicionar à lista</button>
 
     <ul>
       <li *ngFor="let user of users">
-        {{ user }}
+        {{ user.name }} / {{ user.email }}
       </li>
     </ul>    
 </form>

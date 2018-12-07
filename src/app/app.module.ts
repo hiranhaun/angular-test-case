@@ -7,13 +7,15 @@ import { NgForTestComponent } from './ng-for-test/ng-for-test.component';
 import { HomeComponent } from './home/home.component';
 import { routes } from './app.routes';
 import { FormGroupComponent } from './form-group/form-group.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgForTestComponent,
     HomeComponent,
-    FormGroupComponent
+    FormGroupComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

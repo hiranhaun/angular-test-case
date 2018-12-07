@@ -1,10 +1,23 @@
-<table border="1">
-    <tr>
-        <td><a [routerLink]="['/']">Home</a></td>
-        <td><a [routerLink]="['/ngForTest']">ngFor</a></td>
-        <td><a [routerLink]="['/formGroup']">ngForm / ReactiveForms</a></td>
-    </tr>
-</table>
-<br/>
-<br/>
-<router-outlet></router-outlet>
+<div class="loader">
+	<div class="loader-outter"></div>
+	<div class="loader-inner"></div>
+</div>
+
+<div class="body-container container-fluid">
+	<a class="menu-btn" href="javascript:void(0)">
+		<i class="ion ion-grid"></i>
+	</a>
+	<div class="row justify-content-center">
+		<div class="col-lg-2 col-md-3 col-12 menu_block">
+			<app-menu></app-menu>
+		</div>
+
+		<div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+			<div class="portfolio">
+				<div class="container-fluid">
+					<router-outlet></router-outlet>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

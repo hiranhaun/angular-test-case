@@ -8,7 +8,7 @@ import { User } from './user.model';
 })
 export class FormGroupComponent implements OnInit {
 
-  title: string = 'Testando o ngFor';
+  title: string = 'Example';
 
   users: User[] = [];
   

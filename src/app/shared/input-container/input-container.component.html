@@ -1,0 +1,8 @@
+<div class="form-group" 
+     [class.has-success]="hasSucess()"
+     [class.has-error]="hasError()">
+  <label>{{label}}<span *ngIf="showRequired" style="color:red">*</span>&nbsp;&nbsp;&nbsp;</label>
+  <label class="control-label" *ngIf="showTip && hasSucess()"><i class="fa fa-check"></i> Ok</label>
+  <label class="control-label" *ngIf="showTip && hasError()"><i class="fa fa-times-circle-o"></i> {{errorMessage}}</label>
+  <ng-content></ng-content>
+</div>

@@ -19,15 +19,17 @@ export class FormGroupComponent implements OnInit {
   ngOnInit() {
     this.formGroup = this.formBuilder.group({
       name: this.formBuilder.control('', [Validators.required]),
-      email: this.formBuilder.control('', [Validators.required, Validators.email])
+      email: this.formBuilder.control('', [Validators.required/*, Validators.email*/])
     })
   }
 
   addUser(): void {
     this.users.push(new User(this.formGroup.get('name').value, this.formGroup.get('email').value));
+    this.formGroup.reset();
+  }
 
-    this.formGroup.get('name').setValue(undefined);
-    this.formGroup.get('email').setValue(undefined);
+  removeUser(user: User): void {
+    this.users.splice(this.users.indexOf(user),1);
   }
 
 }

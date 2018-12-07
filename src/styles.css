@@ -1,3 +1,16 @@
-.logo_menu {
-    max-width: 90%;
+.imgMenu {
+  margin-top: 10px;
+}
+
+.imgLogoMini {
+  width: 40px;
+}
+
+.imgLogoLg {
+  width: 140px;
+}
+
+.imgSocialNetwork {
+  margin-right: 5px;
+  margin-top: 8px;
 }

@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NgForTestComponent } from './ng-for-test/ng-for-test.component';
 import { HomeComponent } from './home/home.component';
 import { routes } from './app.routes';
 import { FormGroupComponent } from './form-group/form-group.component';
 import { MenuComponent } from './menu/menu.component';
+import { InputContainerComponent } from './shared/input-container/input-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgForTestComponent,
     HomeComponent,
     FormGroupComponent,
-    MenuComponent
+    MenuComponent,
+    InputContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,7 @@ import { MenuComponent } from './menu/menu.component';
     ReactiveFormsModule,
     routes
   ],
-  providers: [],
+  providers: [InputContainerComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

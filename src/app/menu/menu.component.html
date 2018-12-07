@@ -1,42 +1,21 @@
-<div class="logo_box">
-  <a [routerLink]="['/']">
-    <img src="assets/img/angular_logo.png" alt="cocoon" class="logo_menu">
-  </a>
-</div>
-
-<div class="side_menu_section">
-  <ul class="menu_nav">
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <a [routerLink]="['/']">Home</a>
-    </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/ngForTest']">ngFor</a>
-    </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/formGroup']">ngFor com ReactiveForm</a>
-    </li>
-  </ul>
-</div>
-
-<div class="side_menu_bottom">
-  <div class="side_menu_bottom_inner">
-    <ul class="social_menu">
-      <li>
-        <a href="http://www.linkedin.com/in/hiran-haun" target="_blank"> <i class="ion ion-social-linkedin"></i> </a>
-      </li>
-      <li>
-        <a href="http://github.com/hiranhaun/" target="_blank"> <i class="ion ion-social-github"></i> </a>
-      </li>
-      <li>
-        <a href="http://www.instagram.com/_hiranhaun/" target="_blank"> <i class="ion ion-social-instagram"></i> </a>
-      </li>
-      <li>
-        <a href="http://www.facebook.com/hiran.haun.1" target="_blank"> <i class="ion ion-social-facebook"></i> </a>
-      </li>
-    </ul>
-    
-    <div class="copy_right">
-      <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-    </div>
+<div class="user-panel">
+  <div class="pull-left image">
+    <img src="assets/img/fotohiran.png" class="img-circle" alt="User Image">
+  </div>
+  <div class="pull-left info imgMenu">
+    <p>Hiran Haun</p>
   </div>
 </div>
+<!-- sidebar menu: : style can be found in sidebar.less -->
+<ul class="sidebar-menu" data-widget="tree">
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <a [routerLink]="['/']">
+      <i class="fa fa-home"></i> <span>Home</span>
+    </a>
+  </li>
+  <li routerLinkActive="active">
+    <a [routerLink]="['/formGroup']">
+      <i class="fa fa-edit"></i> <span>Reactive Forms</span>
+    </a>
+  </li>
+</ul>

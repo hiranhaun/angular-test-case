@@ -1,16 +1,45 @@
-<h2>
-  {{ title }}
-</h2>
+<section class="content-header">
+  <h1>{{title}}</h1>
+  <ol class="breadcrumb">
+    <li><a [routerLink]="['/']"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">{{title}}</li>
+  </ol>
+</section>
 
-<form [formGroup]="formGroup" novalidate>
-    <input type="text" formControlName="name" placeholder="Nome">
-    <input type="text" formControlName="email" placeholder="E-mail">
+<section class="content">
+  <form [formGroup]="formGroup" novalidate>
+    <app-input-container errorMessage="Campo obrigatório" label="Nome" showRequired="true">
+      <input type="text" class="form-control" formControlName="name" placeholder="Nome"><br/>
+    </app-input-container>
+    
+    <app-input-container errorMessage="Campo obrigatório / E-mail inválido" label="E-mail" showRequired="true">
+      <input type="text" class="form-control" formControlName="email" placeholder="E-mail"><br/>
+    </app-input-container>
+    
+    <button type="button" class="btn btn-primary" (click)="addUser()" [disabled]="!formGroup.valid">Adicionar à lista</button><br/>
 
-    <button type="button" (click)="addUser()" [disabled]="!formGroup.valid">Adicionar à lista</button>
+    <br/>
 
-    <ul>
-      <li *ngFor="let user of users">
-        {{ user.name }} / {{ user.email }}
-      </li>
-    </ul>    
-</form>
+    <div class="box">
+      <div class="box-header">
+        <h3 class="box-title">Usuários</h3>
+      </div>
+      <div class="box-body no-padding">
+        <table class="table table-striped">
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+          </tr>
+          <tr *ngFor="let user of users">
+            <td>
+              <a (click)="removeUser(user)" class="btn btn-sm danger"><i class="fa fa-remove"></i></a>
+            </td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </form>
+</section>

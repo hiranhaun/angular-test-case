@@ -1,23 +1,56 @@
-<div class="loader">
-	<div class="loader-outter"></div>
-	<div class="loader-inner"></div>
-</div>
+<body class="hold-transition skin-blue sidebar-mini">
+	<div class="wrapper">
+		<header class="main-header">
+		<a href="#" class="logo">
+			<span class="logo-mini"><img src="assets/img/angularshield.png" class="imgLogoMini"></span>
+			<span class="logo-lg"><img src="assets/img/angularjs.png" class="imgLogoLg"></span>
+		</a>
+		<nav class="navbar navbar-static-top">
+			<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+				<span class="sr-only">Alternar navegação</span>
+			</a>
 
-<div class="body-container container-fluid">
-	<a class="menu-btn" href="javascript:void(0)">
-		<i class="ion ion-grid"></i>
-	</a>
-	<div class="row justify-content-center">
-		<div class="col-lg-2 col-md-3 col-12 menu_block">
-			<app-menu></app-menu>
-		</div>
-
-		<div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
-			<div class="portfolio">
-				<div class="container-fluid">
-					<router-outlet></router-outlet>
-				</div>
+      <div class="navbar-custom-menu">
+				<a href="http://www.linkedin.com/in/hiran-haun" target="_blank" class="btn btn-social-icon btn-linkedin imgSocialNetwork"><i class="fa fa-linkedin"></i></a>
+				<a href="http://github.com/hiranhaun/" target="_blank" class="btn btn-social-icon btn-github imgSocialNetwork"><i class="fa fa-github"></i></a>
+				<a href="http://www.facebook.com/hiran.haun.1" target="_blank" class="btn btn-social-icon btn-facebook imgSocialNetwork"><i class="fa fa-facebook"></i></a>
+				<a href="http://www.instagram.com/_hiranhaun/" target="_blank" class="btn btn-social-icon btn-instagram imgSocialNetwork"><i class="fa fa-instagram"></i></a>
 			</div>
-		</div>
+			<!--
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="http://www.linkedin.com/in/hiran-haun" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+						</li>
+						<li>
+							<a href="http://github.com/hiranhaun/" target="_blank"><i class="fa fa-github-square"></i></a>
+						</li>
+						<li>
+							<a href="http://www.facebook.com/hiran.haun.1" target="_blank"><i class="fa fa-facebook-square"></i></a>
+						</li>
+						<li>
+							<a href="http://www.instagram.com/_hiranhaun/" target="_blank"><i class="fa fa-instagram"></i></a>
+						</li>
+					</ul>
+				</div>
+			-->			
+		</nav>
+	</header>
+
+	<aside class="main-sidebar">
+		<section class="sidebar">
+			<app-menu></app-menu>
+		</section>
+	</aside>
+
+	<div class="content-wrapper" style="min-height: 500px !important;">
+		<router-outlet></router-outlet>
 	</div>
+	
+	<footer class="main-footer">
+		<div class="pull-right hidden-xs">
+			<b>Version</b> 2.4.0
+		</div>
+		<strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights reserved.
+	</footer>
 </div>
